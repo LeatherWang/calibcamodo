@@ -1,0 +1,58 @@
+%YAML:1.0
+
+# Camera intrinsics
+IMAGE_WIDTH: 800
+IMAGE_HEIGHT: 600
+CAMERA_MATRIX: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 6.267450510491672e+02 , 0., 3.907826222491958e+02, 0.,
+        6.288361649137948e+02,  3.213358761815081e+02, 0., 0., 1.]
+DISTORTION_COEFFICIENTS: !!opencv-matrix
+   rows: 5
+   cols: 1
+   dt: d
+   data: [ -0.432171632362602,  0.168157939367814,  0.0,   0.0,  0.0 ]
+
+
+# Calibration configures 9573
+MARK_SIZE: 200
+NUM_FRAME: 300
+
+# @todo 【5】修改
+# Camera extrinsics
+RVEC_BC: !!opencv-matrix
+   rows: 3
+   cols: 1 
+   dt: f
+   data: [ -1.4372996, -0.025954589, 0.0079677906]
+
+# @todo 【6】修改
+# unit: mm
+TVEC_BC: !!opencv-matrix
+   rows: 3
+   cols: 1
+   dt: f
+   data: [0, 0, 0.0]
+
+# @todo 不一致的地方
+DATASET_THRESH_KF_ODOROT: 0.1
+DATASET_THRESH_KF_ODOLIN: 200
+
+CALIB_ODOLIN_ERRR: 0.001
+CALIB_ODOLIN_ERRMIN: 0.1
+CALIB_ODOROT_ERRR: 0.01
+CALIB_ODOROT_ERRRLIN: 1.67e-6
+CALIB_ODOROT_ERRMIN: 1.67e-3
+CALIB_AMKZ_ERRRZ: 0.03
+CALIB_AMKZ_ERRMIN: 1
+CALIB_AMKXY_ERRRZ: 0.03
+CALIB_AMKXY_ERRMIN: 1
+
+MAPPUB_SCALE_RATIO: 1000
+
+# .txt format, modity to .bin
+STR_FILEPATH_ORBVOC: "/home/leather/leather_repertory/SLAM_YGZ/ORB-YGZ-SLAM/Vocabulary/ORBvoc.bin"
+
+
